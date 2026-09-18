@@ -8,164 +8,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Carátula Editorial / Tipográfica */
-    .cover-editorial-container {
-      position: relative;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-      text-align: left;
-      min-height: 80vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      overflow: hidden;
-    }
-
-    /* Gran texto watermark de fondo */
-    .watermark-bg {
-      position: absolute;
-      top: 50%;
-      right: -2%;
-      transform: translateY(-50%);
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(12rem, 28vw, 24rem);
-      font-weight: 900;
-      letter-spacing: -0.04em;
-      color: rgba(255, 255, 255, 0.03);
-      user-select: none;
-      pointer-events: none;
-      line-height: 0.8;
-      z-index: 0;
-      text-transform: uppercase;
-    }
-
-    .editorial-content {
-      position: relative;
-      z-index: 1;
-      max-width: 680px;
-    }
-
-    .editorial-meta {
-      display: flex;
-      align-items: center;
-      gap: 1.2rem;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 0.95rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--accent, #3182ce);
-      margin-bottom: 2rem;
-      font-weight: 700;
-    }
-
-    .editorial-meta span {
-      color: rgba(255, 255, 255, 0.3);
-    }
-
-    .editorial-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(4rem, 9vw, 7rem);
-      font-weight: 800;
-      line-height: 0.88;
-      letter-spacing: -0.01em;
-      text-transform: uppercase;
-      color: #ffffff;
-      margin: 0 0 1.5rem 0;
-    }
-
-    .editorial-subtitle {
-      font-size: clamp(1.1rem, 2.2vw, 1.35rem);
-      font-weight: 300;
-      line-height: 1.45;
-      color: #cbd5e0;
-      margin: 0;
-      border-left: 2px solid var(--accent, #3182ce);
-      padding-left: 1.2rem;
-    }
-
-    /* Footer con tarjetas individuales violetas para el equipo */
-    .editorial-footer {
-      position: relative;
-      z-index: 1;
-      padding-top: 2.5rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      margin-top: 3rem;
-    }
-
-    .editorial-footer-label {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: #a78bfa;
-      margin-bottom: 1rem;
-    }
-
-    .editorial-team-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-      gap: 1rem;
-    }
-
-    /* Cuadrado individual violeta por integrante */
-    .editorial-team-card {
-      background: rgba(109, 40, 217, 0.15);
-      border: 1px solid rgba(139, 92, 246, 0.4);
-      border-radius: 8px;
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-
-    .editorial-team-card:hover {
-      transform: translateY(-2px);
-      border-color: rgba(139, 92, 246, 0.8);
-      background: rgba(109, 40, 217, 0.25);
-    }
-
-    .editorial-team-name {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #ffffff;
-      line-height: 1.2;
-    }
-
-    .editorial-team-role {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 0.8rem;
-      color: #c4b5fd;
-      letter-spacing: 0.05em;
-      margin-top: 0.3rem;
-    }
-
-    /* Contador flotante inferior al pasar el cursor */
-    .bottom-hover-counter {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(0, 0, 0, 0.85);
-      color: #fff;
-      padding: 6px 16px;
-      border-radius: 20px;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 0.95rem;
-      letter-spacing: 0.05em;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      pointer-events: auto;
-      z-index: 1000;
-    }
-
-    .bottom-hover-counter:hover {
-      opacity: 1;
-    }
-  </style>
 </head>
 <body>
 
@@ -185,49 +27,53 @@
 
     <!-- DIAPO 1: Carátula de Inicio -->
     <div class="slide active" id="s1">
-      <div class="slide-content cover-editorial-container">
-        
-        <div class="watermark-bg">TADIN</div>
+      <div class="slide-content" style="padding: 0; height: 100%;">
+        <div class="cover-editorial-container">
+          
+          <div class="watermark-bg">TADIN</div>
 
-        <div class="editorial-content">
-          <div class="editorial-meta">
-            <span>7MO INFORMÁTICA B</span> / <span>EQUIPO 06</span> / ETAPA 03 · ALFA
+          <div class="editorial-content">
+            <div class="editorial-badges">
+              <span class="cover-badge"><span class="badge-dot"></span> VERSIÓN ALFA</span>
+              <span class="cover-badge">7MO INFORMÁTICA B</span>
+              <span class="cover-badge">EQUIPO 06</span>
+            </div>
+
+            <h1 class="editorial-title">TA-DIN</h1>
+            
+            <p class="editorial-subtitle">
+              Digitalización de procesos corporativos y gestión de asistencia biométrica para la industria.
+            </p>
           </div>
 
-          <h1 class="editorial-title">TA-DIN</h1>
-          
-          <p class="editorial-subtitle">
-            Digitalización de procesos corporativos y gestión de asistencia biométrica para la industria.
-          </p>
-        </div>
-
-        <div class="editorial-footer">
-          <div class="editorial-footer-label">Integrantes del Proyecto</div>
-          
-          <div class="editorial-team-grid">
-            <div class="editorial-team-card">
-              <span class="editorial-team-name">Mía Niello</span>
-              <span class="editorial-team-role">PM · Front / Back</span>
-            </div>
-            <div class="editorial-team-card">
-              <span class="editorial-team-name">Catalina Quintana</span>
-              <span class="editorial-team-role">Front / Back · UX/UI</span>
-            </div>
-            <div class="editorial-team-card">
-              <span class="editorial-team-name">Tatiana Bravo</span>
-              <span class="editorial-team-role">Front / Back</span>
-            </div>
-            <div class="editorial-team-card">
-              <span class="editorial-team-name">Nicolás Perri</span>
-              <span class="editorial-team-role">DB · Front / Back</span>
-            </div>
-            <div class="editorial-team-card">
-              <span class="editorial-team-name">Milagros Camino</span>
-              <span class="editorial-team-role">Seguridad e Infraestructura</span>
+          <div class="editorial-footer">
+            <div class="editorial-footer-label">Integrantes del Proyecto</div>
+            
+            <div class="editorial-team-grid">
+              <div class="editorial-team-card -card">
+                <span class="editorial-team-name">Mía Niello</span>
+                <span class="editorial-team-role">PM · Front / Back</span>
+              </div>
+              <div class="editorial-team-card">
+                <span class="editorial-team-name">Catalina Quintana</span>
+                <span class="editorial-team-role">Front / Back · UX/UI</span>
+              </div>
+              <div class="editorial-team-card">
+                <span class="editorial-team-name">Tatiana Bravo</span>
+                <span class="editorial-team-role">Front / Back</span>
+              </div>
+              <div class="editorial-team-card">
+                <span class="editorial-team-name">Nicolás Perri</span>
+                <span class="editorial-team-role">DB · Front / Back</span>
+              </div>
+              <div class="editorial-team-card">
+                <span class="editorial-team-name">Milagros Camino</span>
+                <span class="editorial-team-role">Seguridad e Infraestructura</span>
+              </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
 
@@ -239,7 +85,7 @@
         <div class="divider"></div>
         
         <p style="color: var(--text-body); margin-bottom: 1.5rem; font-size: 1.05rem;">
-          TA-DIN busca profesionalizarse para captar clientes en los sectores petrolero, minero y telefónico. La digitalización permite iniciar el proceso de certificación bajo las normas <strong>ISO 9001 e ISO 14001</strong>.
+          TA-DIN busca profesionalizarse para captar clientes en los sectores petrolero, minero y telefónico. La digitalización permite iniciar el proceso de certificación bajo las normas <strong>ISO 9001 e ISO 14001</strong>. Toda esta información se encuentra en la <a href="https://mianiello.github.io/Documentacion-TA-DIN/#gantt" target="_blank" style="color: var(--accent, #3182ce); text-decoration: underline;">documentación digital</a> y en la <a href="https://cataquintana11.github.io/landing-page/" target="_blank" style="color: var(--accent, #3182ce); text-decoration: underline;">landing page</a>.
         </p>
 
         <div class="grid-2">
@@ -263,10 +109,66 @@
       </div>
     </div>
 
-    <!-- DIAPO 3: Avances -->
+    <!-- DIAPO 3: Registro de Entrevistas y Evolución -->
     <div class="slide" id="s3">
       <div class="slide-content">
         <div class="slide-number">03</div>
+        <h2 class="slide-title">Registro de Entrevistas & Evolución</h2>
+        <div class="divider"></div>
+
+        <div class="grid-2" style="margin-bottom: 1rem;">
+          <div class="card" style="padding: 0.9rem 1.1rem; opacity: 0.85;">
+            <div class="card-title" style="font-size: 0.95rem; color: #a78bfa;">Entrevista N°1 · 15/04/2026 (Validación Inicial)</div>
+            <p style="font-size: 0.82rem; color: var(--text-body); margin-bottom: 0.4rem;"><strong>Clientes:</strong> Silvana Bravo y Sergio Bravo | <strong>Equipo:</strong> PM, D03, DUX, IS</p>
+            <ul class="styled-list" style="font-size: 0.8rem; margin: 0;">
+              <li>Ideación y definición del alcance del proyecto.</li>
+              <li>Aprobación del enfoque inicial y primer prototipo.</li>
+              <li><strong>Cambio Mockup:</strong> Extensión de solo biométrico a sitio web completo, formulario y NFC.</li>
+            </ul>
+          </div>
+
+          <div class="card" style="padding: 0.9rem 1.1rem; opacity: 0.85;">
+            <div class="card-title" style="font-size: 0.95rem; color: #a78bfa;">Entrevista N°2 · 12/06/2026 (Validación de Avances)</div>
+            <p style="font-size: 0.82rem; color: var(--text-body); margin-bottom: 0.4rem;"><strong>Clientes:</strong> Silvana Bravo y Sergio Bravo | <strong>Equipo:</strong> PM, DUX, D03, BD, IS</p>
+            <ul class="styled-list" style="font-size: 0.8rem; margin: 0;">
+              <li>Revisión del primer mockup navegable y flujos.</li>
+              <li>Aprobación de ajustes visuales y subida a base de datos/servidor.</li>
+              <li><strong>Cambio Mockup:</strong> Reestructuración de marca y formulario embebido directo en la web.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" style="background: rgba(139, 92, 246, 0.12); border: 1.5px solid rgba(139, 92, 246, 0.6); padding: 1.2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+            <div class="card-title" style="font-size: 1.1rem; color: #ffffff; margin: 0;">Entrevista N°3 · 18/09/2026 (Fase Final & Definiciones)</div>
+          </div>
+          <p style="font-size: 0.88rem; color: #cbd5e0; margin-bottom: 0.8rem;">
+            <strong>Participantes:</strong> Sergio Bravo (Cliente) | PM, D03, IS(Equipo).
+          </p>
+          
+          <div class="grid-3" style="gap: 0.8rem;">
+            <div style="background: rgba(0,0,0,0.3); padding: 0.7rem; border-radius: 6px;">
+              <strong style="color: #c4b5fd; font-size: 0.85rem; display: block; margin-bottom: 0.3rem;">1. Sección Visual Web</strong>
+              <p style="font-size: 0.8rem; color: var(--text-body); margin: 0;">Incorporación de fotografías reales en secciones clave de la web para reforzar el impacto corporativo.</p>
+            </div>
+            <div style="background: rgba(0,0,0,0.3); padding: 0.7rem; border-radius: 6px;">
+              <strong style="color: #c4b5fd; font-size: 0.85rem; display: block; margin-bottom: 0.3rem;">2. Formulario de Cotización</strong>
+              <p style="font-size: 0.8rem; color: var(--text-body); margin: 0;">Personalización y adaptación de campos estructurales según los requerimientos del cliente.</p>
+            </div>
+            <div style="background: rgba(0,0,0,0.3); padding: 0.7rem; border-radius: 6px;">
+              <strong style="color: #c4b5fd; font-size: 0.85rem; display: block; margin-bottom: 0.3rem;">3. Enrolamiento Biométrico</strong>
+              <p style="font-size: 0.8rem; color: var(--text-body); margin: 0;">Registro e integración completa de huellas dactilares vinculadas al nombre de cada empleado.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- DIAPO 4: Avances -->
+    <div class="slide" id="s4">
+      <div class="slide-content">
+        <div class="slide-number">04</div>
         <h2 class="slide-title">Avances del Proyecto</h2>
         <div class="divider"></div>
 
@@ -274,70 +176,99 @@
           <div class="card" style="display: flex; flex-direction: column; justify-content: center;">
             <div class="card-title">Estructura Web y Contacto</div>
             <ul class="styled-list">
-              <li>Estructura principal finalizada en dominio <span class="code-tag"><a href="http://tadin.com.ar" target="_blank" style="color: inherit; text-decoration: underline;">tadin.com.ar</a></span>.</li>
-              <li>Despliegue de ruta de contacto interactiva en <span class="code-tag"><a href="http://tadin.com.ar/contacto" target="_blank" style="color: inherit; text-decoration: underline;">tadin.com.ar/contacto</a></span>.</li>
-              <li>Transferencia de información en reuniones corporativas mediante tarjetas físicas con tecnología <strong>NFC</strong>.</li>
+              <li>Agregamos a la página imágenes de cada una de las industrias con las que trabajan. Estructura principal finalizada en dominio <span class="code-tag"><a href="http://tadin.com.ar" target="_blank" style="color: inherit; text-decoration: underline;">tadin.com.ar</a></span>.</li>
+              <li>Modificamos el formulario de contacto para realizar cotizaciones.</li>
+              <li>Despliegue de ruta de contacto interactiva en <span class="code-tag"><a href="http://tadin.com.ar/silvana" target="_blank" style="color: inherit; text-decoration: underline;">tadin.com.ar/silvana</a></span> y <span class="code-tag"><a href="http://tadin.com.ar/sergio" target="_blank" style="color: inherit; text-decoration: underline;">tadin.com.ar/sergio</a></span>.</li>
               <li>Implementación de un código <strong>QR</strong> alternativo para dispositivos sin conectividad NFC.</li>
             </ul>
           </div>
-          <div class="card" style="text-align: center; background: rgba(255,255,255,0.02);">
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Tarjeta Digital NFC/QR · Vista Previa</p>
 
+          <div class="card" style="text-align: center; background: rgba(255,255,255,0.02); display: flex; flex-direction: column; gap: 1rem; justify-content: center; padding: 1rem;">
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Tarjetas Digitales NFC/QR · Vista Previa</p>
+
+            <!-- Tarjeta 1: Sergio Bravo -->
             <div style="
-              background: #F4F5F7;
-              border-radius: 18px;
-              padding: 2.2rem 2rem;
+              background: #FFFFFF;
+              border-radius: 12px;
+              padding: 1.2rem;
               color: #1A2B4C;
-              box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+              box-shadow: 0 4px 15px rgba(0,0,0,0.25);
               text-align: left;
               position: relative;
-              max-width: 480px;
-              margin: 0 auto;
               font-family: 'Inter', system-ui, -apple-system, sans-serif;
             ">
-              
-              <div style="position: absolute; top: 1.8rem; right: 1.8rem; width: 42px; height: 42px; border: 2px solid #1A2B4C; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;">
-                <svg width="20" height="14" viewBox="0 0 24 16" fill="none" stroke="#1A2B4C" stroke-width="2.2" stroke-linecap="round">
-                  <path d="M2 3a18 18 0 0 1 20 0" />
-                  <path d="M5 7a13 13 0 0 1 14 0" />
-                  <path d="M9 11a7 7 0 0 1 6 0" />
-                </svg>
-                <span style="font-size: 0.55rem; font-weight: 800; color: #1A2B4C; letter-spacing: 0.05em; line-height: 1;">NFC</span>
-              </div>
+             
 
-              <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-top: 0.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
                 <div>
-                  <h2 style="color: #1A2B4C; font-family: 'Inter', sans-serif; font-size: 2.7rem; font-weight: 800; letter-spacing: 0.02em; margin: 0; line-height: 1;">TA-DIN</h2>
-                  <p style="color: #1A2B4C; font-size: 1.05rem; font-weight: 600; margin: 0.4rem 0 3.2rem 0;">Industrial Powder Coating</p>
+                  <h3 style="color: #1A2B4C; font-size: 1.6rem; font-weight: 800; margin: 0; line-height: 1;">TA-DIN</h3>
+                  <p style="color: #1A2B4C; font-size: 0.75rem; font-weight: 600; margin: 0.2rem 0 0.8rem 0;">Industrial Powder Coating</p>
 
-                  <div style="font-size: 0.95rem; font-weight: 700; color: #1A2B4C; line-height: 1.45;">
+                  <div style="font-size: 0.7rem; font-weight: 700; color: #1A2B4C; line-height: 1.3;">
+                    <p style="margin: 0;"><strong>Sergio Bravo</strong> - Director General</p>
+                    <p style="margin: 0;">15 5523-6129</p>
                     <p style="margin: 0;">info@tadin.com</p>
-                    <p style="margin: 0;">11 6880-8040</p>
-                    <p style="margin: 0;">
-                      <a href="https://tadin.com.ar" target="_blank" style="color: #1A2B4C; text-decoration: none;">www.tadin.com.ar</a>
-                    </p>
-                    <p style="margin: 0; font-weight: 600;">La Cautiva 6965, Villa Bosch</p>
+                    <p style="margin: 0;"><a href="https://www.tadin.com.ar" target="_blank" style="color: #1A2B4C; text-decoration: none;">www.tadin.com.ar</a></p>
+                    <p style="margin: 0; font-weight: 500;">La Cautiva 6965, Villa Bosch</p>
                   </div>
                 </div>
 
-                <div style="flex-shrink: 0; margin-left: 1rem;">
+                <div style="flex-shrink: 0; margin-left: 0.8rem;">
                   <img 
-                    src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://tadin.com.ar/contacto&color=1A2B4C&bgcolor=F4F5F7" 
-                    alt="QR Contacto TA-DIN" 
-                    style="width: 140px; height: 140px; display: block;"
+                    src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=http://tadin.com.ar/sergio&color=1A2B4C&bgcolor=FFFFFF" 
+                    alt="QR Sergio Bravo" 
+                    style="width: 85px; height: 85px; display: block;"
                   />
                 </div>
               </div>
             </div>
+
+            <!-- Tarjeta 2: Silvana Bravo -->
+            <div style="
+              background: #FFFFFF;
+              border-radius: 12px;
+              padding: 1.2rem;
+              color: #1A2B4C;
+              box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+              text-align: left;
+              position: relative;
+              font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            ">
+        
+
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <h3 style="color: #1A2B4C; font-size: 1.6rem; font-weight: 800; margin: 0; line-height: 1;">TA-DIN</h3>
+                  <p style="color: #1A2B4C; font-size: 0.75rem; font-weight: 600; margin: 0.2rem 0 0.8rem 0;">Industrial Powder Coating</p>
+
+                  <div style="font-size: 0.7rem; font-weight: 700; color: #1A2B4C; line-height: 1.3;">
+                    <p style="margin: 0;"><strong>Silvana Bravo</strong> - Gerente Administrativo</p>
+                    <p style="margin: 0;">11 3009-4157</p>
+                    <p style="margin: 0;">info@tadin.com</p>
+                    <p style="margin: 0;"><a href="https://www.tadin.com.ar" target="_blank" style="color: #1A2B4C; text-decoration: none;">www.tadin.com.ar</a></p>
+                    <p style="margin: 0; font-weight: 500;">La Cautiva 6965, Villa Bosch</p>
+                  </div>
+                </div>
+
+                <div style="flex-shrink: 0; margin-left: 0.8rem;">
+                  <img 
+                    src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=http://tadin.com.ar/silvana&color=1A2B4C&bgcolor=FFFFFF" 
+                    alt="QR Silvana Bravo" 
+                    style="width: 85px; height: 85px; display: block;"
+                  />
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
     </div>
 
-    <!-- DIAPO 4: Combinación de Módulos Internos y Seguridad -->
-    <div class="slide" id="s4">
+    <!-- DIAPO 5: Combinación de Módulos Internos y Seguridad -->
+    <div class="slide" id="s5">
       <div class="slide-content">
-        <div class="slide-number">04</div>
+        <div class="slide-number">05</div>
         <h2 class="slide-title">Plataforma de RRHH</h2>
         <div class="divider"></div>
 
@@ -394,149 +325,288 @@
       </div>
     </div>
 
-    <!-- DIAPO 5: Documentación Técnica -->
-    <div class="slide" id="s5">
+    <!-- DIAPO 6: Documentación Técnica, Arquitectura, Manual de Usuario & Operación (Combinada) -->
+    <div class="slide" id="s6">
       <div class="slide-content">
-        <div class="slide-number">05</div>
-        <h2 class="slide-title">Documentación Técnica & Arquitectura</h2>
+        <div class="slide-number">06</div>
+        <h2 class="slide-title">Documentación Técnica & Operación</h2>
         <div class="divider"></div>
 
-        <div class="grid-3">
-          <div class="card">
-            <div class="card-title">Módulo A · Web</div>
-            <ul class="styled-list">
+        <h3 style="font-size: 1.15rem; color: var(--accent); margin: 0.8rem 0 0.6rem 0; font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; letter-spacing: 0.05em;">
+          Documentación Técnica & Arquitectura
+        </h3>
+
+        <div class="grid-4" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.8rem; margin-bottom: 0.8rem;">
+          <div class="card" style="padding: 0.7rem 0.9rem;">
+            <div class="card-title" style="font-size: 0.85rem; margin-bottom: 0.4rem;">Módulo A · Web</div>
+            <ul class="styled-list" style="font-size: 0.78rem; margin: 0;">
               <li><strong>Frontend:</strong> HTML5, CSS3 responsivo.</li>
               <li><strong>Hosting:</strong> DonWeb mediante FTP FileZilla.</li>
               <li><strong>Propósito:</strong> Captación de leads B2B.</li>
             </ul>
           </div>
-          <div class="card">
-            <div class="card-title">Módulo B · Biométrico</div>
-            <ul class="styled-list">
+          <div class="card" style="padding: 0.7rem 0.9rem;">
+            <div class="card-title" style="font-size: 0.85rem; margin-bottom: 0.4rem;">Módulo B · Biométrico</div>
+            <ul class="styled-list" style="font-size: 0.78rem; margin: 0;">
               <li><strong>Hardware:</strong> ZKTeco + ZKBioTime.Net.</li>
               <li><strong>Protocolo:</strong> TCP/IP en red local.</li>
               <li><strong>Tablas:</strong> <span class="code-tag">USUARIO</span>, <span class="code-tag">LOG_MARCACION</span>.</li>
               <li><strong>Algoritmo:</strong> Match 1:N (&lt;1s).</li>
             </ul>
           </div>
-          <div class="card">
-            <div class="card-title">Módulo C · RRHH</div>
-            <ul class="styled-list">
+          <div class="card" style="padding: 0.7rem 0.9rem;">
+            <div class="card-title" style="font-size: 0.85rem; margin-bottom: 0.4rem;">Módulo C · RRHH</div>
+            <ul class="styled-list" style="font-size: 0.78rem; margin: 0;">
               <li><strong>Stack:</strong> PHP 8, Bootstrap 5.3, JS, MySQL.</li>
               <li><strong>Renderizado:</strong> SSR con controladores PHP.</li>
               <li><strong>Tablas:</strong> <span class="code-tag">empleados</span>, <span class="code-tag">registros_asistencia</span>, <span class="code-tag">configuracion</span>.</li>
               <li><strong>Reportes:</strong> Exportación nativa a <span class="code-tag">.xls</span>.</li>
             </ul>
           </div>
-          
-          <div class="card">
-            <div class="card-title">Integración Comercial · Tarjetas NFC</div>
-            <ul class="styled-list">
-              <li><strong>Tecnología:</strong> Dispositivos físicos pasivos NFC (Near Field Communication) programados como tarjetas de presentación interactivas para el equipo comercial.</li>
-              <li><strong>Función:</strong> Transmiten enlaces URL directamente a smartphones para derivar tráfico al sitio web de TA-DIN o al formulario de contacto.</li>
+          <div class="card" style="padding: 0.7rem 0.9rem;">
+            <div class="card-title" style="font-size: 0.85rem; margin-bottom: 0.4rem;">Integración NFC</div>
+            <ul class="styled-list" style="font-size: 0.78rem; margin: 0;">
+              <li><strong>Tecnología:</strong> Dispositivos NFC pasivos.</li>
+              <li><strong>Función:</strong> Transmite URL a smartphones para derivar tráfico al sitio web o formulario.</li>
             </ul>
           </div>
-
         </div>
-      </div>
-    </div>
 
-    <!-- DIAPO 6: Manual de Usuario y FAQ -->
-    <div class="slide" id="s6">
-      <div class="slide-content">
-        <div class="slide-number">06</div>
-        <h2 class="slide-title">Manual de Usuario & Operación</h2>
-        <div class="divider"></div>
+        <h3 style="font-size: 1.15rem; color: var(--accent); margin: 0.8rem 0 0.6rem 0; font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; letter-spacing: 0.05em;">
+          Manual de Usuario & Operación
+        </h3>
 
-        <div class="grid-2">
-          <div class="card">
-            <div class="card-title">1. Operación del Reloj Biométrico</div>
-            <ul class="styled-list">
+        <div class="grid-2" style="gap: 0.8rem;">
+          <div class="card" style="padding: 0.7rem 0.9rem;">
+            <div class="card-title" style="font-size: 0.85rem; margin-bottom: 0.4rem;">1. Operación del Reloj Biométrico</div>
+            <ul class="styled-list" style="font-size: 0.78rem; margin: 0;">
               <li><strong>Identificación:</strong> Rostro, huella, tarjeta RFID o Clave. Modo 1:N o 1:1.</li>
               <li><strong>Uso Correcto:</strong> Distancia de 0.5m para rostro. Huella plana en cristal (registrar índice/medio).</li>
               <li><strong>Contingencias:</strong> Memoria no volátil (opera offline y sincroniza post-conexión o por USB FAT32).</li>
             </ul>
           </div>
-          <div class="card">
-            <div class="card-title">2. Leyenda Matriz Mensual de Asistencia</div>
-            <p style="font-size: 0.85rem; color: var(--text-body); margin-bottom: 0.5rem;">Lectura visual rápida dentro del software de RRHH:</p>
-            <div class="matrix-legend">
-              <span class="badge"><div class="dot-indicator" style="background: var(--status-green);"></div> Verde: Correcto</span>
-              <span class="badge"><div class="dot-indicator" style="background: var(--status-orange);"></div> Naranja: Llegada Tarde</span>
-              <span class="badge"><div class="dot-indicator" style="background: var(--status-blue);"></div> Azul: Turno Incompleto</span>
-              <span class="badge"><div class="dot-indicator" style="background: var(--status-red);"></div> Rojo: Ausente</span>
-              <span class="badge"><div class="dot-indicator" style="background: var(--status-grey);"></div> Gris: Fuera de Turno</span>
+          <div class="card" style="padding: 0.7rem 0.9rem;">
+            <div class="card-title" style="font-size: 0.85rem; margin-bottom: 0.4rem;">2. Leyenda Matriz Mensual de Asistencia</div>
+            <p style="font-size: 0.78rem; color: var(--text-body); margin-bottom: 0.4rem;">Lectura visual rápida dentro del software de RRHH:</p>
+            <div class="matrix-legend" style="gap: 0.4rem;">
+              <span class="badge" style="font-size: 0.75rem;"><div class="dot-indicator" style="background: var(--status-green);"></div> Verde: Correcto</span>
+              <span class="badge" style="font-size: 0.75rem;"><div class="dot-indicator" style="background: var(--status-orange);"></div> Naranja: Llegada Tarde</span>
+              <span class="badge" style="font-size: 0.75rem;"><div class="dot-indicator" style="background: var(--status-blue);"></div> Azul: Turno Incompleto</span>
+              <span class="badge" style="font-size: 0.75rem;"><div class="dot-indicator" style="background: var(--status-red);"></div> Rojo: Ausente</span>
+              <span class="badge" style="font-size: 0.75rem;"><div class="dot-indicator" style="background: var(--status-grey);"></div> Gris: Fuera de Turno</span>
             </div>
           </div>
         </div>
+
+        <!-- Botón de Redirección a la Documentación Digital / Gantt -->
+        <div style="margin-top: 1rem; text-align: center;">
+          <a href="https://mianiello.github.io/Documentacion-TA-DIN/#gantt" target="_blank" style="
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+            color: #ffffff;
+            padding: 0.5rem 1.2rem;
+            border-radius: 8px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+          " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(139, 92, 246, 0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(139, 92, 246, 0.3)';">
+            <span>Ver Documentación Completa</span>
+            <span style="font-size: 1.1rem;">&#8599;</span>
+          </a>
+        </div>
+
       </div>
     </div>
 
-    <!-- DIAPO 7: Landing Page -->
+    <!-- DIAPO 7: Presupuesto y Estimación de Costos -->
     <div class="slide" id="s7">
-      <div class="slide-content" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+      <div class="slide-content">
         <div class="slide-number">07</div>
-        <h2 class="slide-title">Landing Page Institucional</h2>
+        <h2 class="slide-title">Estimación Económica del Proyecto</h2>
         <div class="divider"></div>
-        <div class="card" style="max-width: 700px; padding: 2.5rem; background: var(--bg-dark-mid);">
-          <p style="font-size: 1.2rem; color: var(--text-light); margin-bottom: 1rem;">
-            Vista previa del portal público comercial desplegado en producción.
-          </p>
-          <a href="http://tadin.com.ar" target="_blank" style="display: inline-block; padding: 0.8rem 1.8rem; background: var(--accent); color: #FFF; text-decoration: none; border-radius: var(--radius-sm); font-weight: 600; font-family: 'Barlow Condensed'; letter-spacing: 0.05em; transition: var(--transition);">
-            VISITAR TADIN.COM.AR ↗
-          </a>
+
+        <!-- Ficha de resumen superior -->
+        <div class="card" style="margin-bottom: 0.8rem; padding: 0.6rem 1rem; background: rgba(255,255,255,0.03);">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; font-size: 0.82rem; color: var(--text-body);">
+            <div><strong>Inicio:</strong> 14/04/26 | <strong>Fin:</strong> 14/11/26</div>
+            <div><strong>Esfuerzo:</strong> 687 Horas</div>
+            <div><strong>Margen:</strong> 25% | <strong>Ganancia:</strong> $4.623,86 USD</div>
+            <div style="color: var(--accent); font-weight: bold; font-size: 0.95rem;">Precio Venta: $23.119,28 USD</div>
+          </div>
         </div>
+
+        <div class="grid-2" style="margin-bottom: 0.8rem; gap: 0.8rem;">
+          <!-- Tabla 1.A Costes de Personal -->
+          <div class="card" style="padding: 0.8rem;">
+            <div class="card-title" style="font-size: 0.9rem; margin-bottom: 0.5rem; color: #a78bfa;">1.A Costes de Personal</div>
+            <div style="max-height: 180px; overflow-y: auto;">
+              <table style="width: 100%; border-collapse: collapse; font-size: 0.72rem; text-align: left; color: var(--text-body);">
+                <thead>
+                  <tr style="border-bottom: 1px solid rgba(255,255,255,0.1); color: #c4b5fd;">
+                    <th style="padding: 2px 4px;">Categoría</th>
+                    <th style="padding: 2px 4px; text-align: center;">Hs</th>
+                    <th style="padding: 2px 4px; text-align: right;">USD/h</th>
+                    <th style="padding: 2px 4px; text-align: right;">Coste</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                    <td style="padding: 2px 4px;">Project Manager</td>
+                    <td style="padding: 2px 4px; text-align: center;">188</td>
+                    <td style="padding: 2px 4px; text-align: right;">$30,00</td>
+                    <td style="padding: 2px 4px; text-align: right;">$5.922,00</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                    <td style="padding: 2px 4px;">Administrador de BD</td>
+                    <td style="padding: 2px 4px; text-align: center;">180</td>
+                    <td style="padding: 2px 4px; text-align: right;">$18,00</td>
+                    <td style="padding: 2px 4px; text-align: right;">$3.402,00</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                    <td style="padding: 2px 4px;">Desarrollador 03 - Front/Back</td>
+                    <td style="padding: 2px 4px; text-align: center;">173</td>
+                    <td style="padding: 2px 4px; text-align: right;">$28,00</td>
+                    <td style="padding: 2px 4px; text-align: right;">$5.086,20</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                    <td style="padding: 2px 4px;">Diseñador UX/UI</td>
+                    <td style="padding: 2px 4px; text-align: center;">146</td>
+                    <td style="padding: 2px 4px; text-align: right;">$22,00</td>
+                    <td style="padding: 2px 4px; text-align: right;">$3.372,60</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 2px 4px;">Especialista en Infraestructura</td>
+                    <td style="padding: 2px 4px; text-align: center;">208</td>
+                    <td style="padding: 2px 4px; text-align: right;">-</td>
+                    <td style="padding: 2px 4px; text-align: right;">$0,00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="margin-top: 0.5rem; text-align: right; font-size: 0.8rem; font-weight: bold; color: #ffffff; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 0.3rem;">
+              Subtotal Personal: $17.782,80 USD
+            </div>
+          </div>
+
+          <!-- Tabla 1.B Costes Varios -->
+          <div class="card" style="padding: 0.8rem;">
+            <div class="card-title" style="font-size: 0.9rem; margin-bottom: 0.5rem; color: #a78bfa;">1.B Costes Varios</div>
+            <div style="max-height: 180px; overflow-y: auto;">
+              <table style="width: 100%; border-collapse: collapse; font-size: 0.72rem; text-align: left; color: var(--text-body);">
+                <thead>
+                  <tr style="border-bottom: 1px solid rgba(255,255,255,0.1); color: #c4b5fd;">
+                    <th style="padding: 2px 4px;">Concepto</th>
+                    <th style="padding: 2px 4px; text-align: center;">Cant.</th>
+                    <th style="padding: 2px 4px; text-align: right;">Base</th>
+                    <th style="padding: 2px 4px; text-align: right;">Coste</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                    <td style="padding: 2px 4px;">Internet</td>
+                    <td style="padding: 2px 4px; text-align: center;">7 meses</td>
+                    <td style="padding: 2px 4px; text-align: right;">$58,00</td>
+                    <td style="padding: 2px 4px; text-align: right;">$434,42</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                    <td style="padding: 2px 4px;">Insumos Materiales</td>
+                    <td style="padding: 2px 4px; text-align: center;">1 un.</td>
+                    <td style="padding: 2px 4px; text-align: right;">$21,00</td>
+                    <td style="padding: 2px 4px; text-align: right;">$22,47</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                    <td style="padding: 2px 4px;">Insumos Tecnológicos</td>
+                    <td style="padding: 2px 4px; text-align: center;">1 un.</td>
+                    <td style="padding: 2px 4px; text-align: right;">$210,00</td>
+                    <td style="padding: 2px 4px; text-align: right;">$224,70</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                    <td style="padding: 2px 4px;">Entrega de productos</td>
+                    <td style="padding: 2px 4px; text-align: center;">1 un.</td>
+                    <td style="padding: 2px 4px; text-align: right;">$10,00</td>
+                    <td style="padding: 2px 4px; text-align: right;">$10,70</td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                    <td style="padding: 2px 4px;">Viáticos & Comida</td>
+                    <td style="padding: 2px 4px; text-align: center;">2 un.</td>
+                    <td style="padding: 2px 4px; text-align: right;">-</td>
+                    <td style="padding: 2px 4px; text-align: right;">$20,33</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="margin-top: 0.5rem; text-align: right; font-size: 0.8rem; font-weight: bold; color: #ffffff; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 0.3rem;">
+              Subtotal Varios: $712,62 USD
+            </div>
+          </div>
+        </div>
+
+        <!-- Total Costes y Gastos -->
+        <div class="card" style="background: rgba(49, 130, 206, 0.15); border: 1.5px solid rgba(49, 130, 206, 0.6); text-align: center; padding: 0.6rem;">
+          <p style="margin: 0; color: #ffffff; font-size: 1.05rem; font-weight: 700;">
+            TOTAL COSTOS Y GASTOS: <span style="color: var(--accent);">$18.495,42 USD</span>
+          </p>
+        </div>
+
       </div>
     </div>
 
     <!-- DIAPO 8: Carátula de Cierre -->
     <div class="slide" id="s8">
-      <div class="slide-content cover-editorial-container">
-        
-        <!-- Marca de agua gigante -->
-        <div class="watermark-bg">TADIN</div>
+      <div class="slide-content" style="padding: 0; height: 100%;">
+        <div class="cover-editorial-container">
+          
+          <div class="watermark-bg">TADIN</div>
 
-        <!-- Encabezado y Títulos -->
-        <div class="editorial-content">
-          <div class="editorial-meta">
-            <span>7MO INFORMÁTICA B</span> / <span>EQUIPO 06</span> / CIERRE DEL PROYECTO
+          <div class="editorial-content">
+            <div class="editorial-badges">
+              <span class="cover-badge">7MO INFORMÁTICA B</span>
+              <span class="cover-badge">EQUIPO 06</span>
+              <span class="cover-badge"><span class="badge-dot" style="background:#10B981;"></span> CIERRE DE PRESENTACIÓN</span>
+            </div>
+
+            <h1 class="editorial-title">TA-DIN</h1>
+            
+            <p class="editorial-subtitle">
+              Digitalización de procesos corporativos y gestión de asistencia biométrica para la industria.
+            </p>
           </div>
 
-          <h1 class="editorial-title">TA-DIN</h1>
-          
-          <p class="editorial-subtitle">
-            Digitalización de procesos corporativos y gestión de asistencia biométrica para la industria.
-          </p>
-        </div>
-
-        <!-- Créditos del equipo en cuadrados individuales violetas -->
-        <div class="editorial-footer">
-          <div class="editorial-footer-label">Integrantes del Proyecto</div>
-          
-          <div class="editorial-team-grid">
-            <div class="editorial-team-card">
-              <span class="editorial-team-name">Mía Niello</span>
-              <span class="editorial-team-role">PM · Front / Back</span>
-            </div>
-            <div class="editorial-team-card">
-              <span class="editorial-team-name">Catalina Quintana</span>
-              <span class="editorial-team-role">Front / Back · UX/UI</span>
-            </div>
-            <div class="editorial-team-card">
-              <span class="editorial-team-name">Tatiana Bravo</span>
-              <span class="editorial-team-role">Front / Back</span>
-            </div>
-            <div class="editorial-team-card">
-              <span class="editorial-team-name">Nicolás Perri</span>
-              <span class="editorial-team-role">DB · Front / Back</span>
-            </div>
-            <div class="editorial-team-card">
-              <span class="editorial-team-name">Milagros Camino</span>
-              <span class="editorial-team-role">Seguridad e Infraestructura</span>
+          <div class="editorial-footer">
+            <div class="editorial-footer-label">Integrantes del Proyecto</div>
+            
+            <div class="editorial-team-grid">
+              <div class="editorial-team-card">
+                <span class="editorial-team-name">Mía Niello</span>
+                <span class="editorial-team-role">PM · Front / Back</span>
+              </div>
+              <div class="editorial-team-card">
+                <span class="editorial-team-name">Catalina Quintana</span>
+                <span class="editorial-team-role">Front / Back · UX/UI</span>
+              </div>
+              <div class="editorial-team-card">
+                <span class="editorial-team-name">Tatiana Bravo</span>
+                <span class="editorial-team-role">Front / Back</span>
+              </div>
+              <div class="editorial-team-card">
+                <span class="editorial-team-name">Nicolás Perri</span>
+                <span class="editorial-team-role">DB · Front / Back</span>
+              </div>
+              <div class="editorial-team-card">
+                <span class="editorial-team-name">Milagros Camino</span>
+                <span class="editorial-team-role">Seguridad e Infraestructura</span>
+              </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
 
